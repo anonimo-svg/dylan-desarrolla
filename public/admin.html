@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
+  <meta name="robots" content="noindex, nofollow">
+  <title>BLACKOUT — Panel de administración</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="assets/logo/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/admin.css">
+  <script src="js/admin.js" defer></script>
+</head>
+<body class="admin-body">
+  <div class="admin-glow" aria-hidden="true"></div>
+  <div class="admin-layout">
+    <header class="admin-topbar">
+      <a class="admin-brand" href="/"><img src="assets/logo/logo.svg" alt="BLACKOUT"><span>CONTROL / 01</span></a>
+      <a class="back-link mono" href="/">Volver al sitio ↗</a>
+    </header>
+
+    <main class="admin-main">
+      <section id="loginView" class="login-view">
+        <div class="admin-kicker mono"><span>ÁREA PRIVADA</span><i></i><span>BLACKOUT ADMIN</span></div>
+        <h1>ACCESO<br><span>RESTRINGIDO.</span></h1>
+        <p class="login-intro">Ingresá con tus credenciales para editar los servicios publicados en tu web.</p>
+        <form id="loginForm" class="login-form">
+          <label for="username">Usuario</label>
+          <input id="username" name="username" type="text" autocomplete="username" required maxlength="80" placeholder="Tu usuario">
+          <label for="password">Contraseña</label>
+          <input id="password" name="password" type="password" autocomplete="current-password" required maxlength="200" placeholder="Tu contraseña">
+          <button class="admin-button" type="submit">Iniciar sesión <span>↗</span></button>
+          <p id="loginMessage" class="admin-message" role="status" aria-live="polite"></p>
+        </form>
+        <p class="security-note mono">ACCESO VALIDADO EN EL SERVIDOR · SESIÓN TEMPORAL</p>
+      </section>
+
+      <section id="panelView" class="panel-view" hidden>
+        <div class="panel-heading">
+          <div>
+            <div class="admin-kicker mono"><span>SESIÓN ACTIVA</span><i></i><span>EDICIÓN DE CONTENIDO</span></div>
+            <h1>PANEL<span> ADMIN.</span></h1>
+            <p>Los cambios se guardan en el servidor y se reflejan para todos los visitantes.</p>
+          </div>
+          <button id="logoutButton" class="logout-button" type="button">Cerrar sesión ↗</button>
+        </div>
+
+        <div class="editor-explainer">
+          <span class="editor-icon">↳</span>
+          <p>Editá el nombre, la descripción o el precio. Marcá “Solicitar presupuesto” para servicios cuyo valor se define caso por caso.</p>
+        </div>
+
+        <form id="servicesForm" class="services-form">
+          <div id="serviceFields" class="service-fields"></div>
+          <div class="save-bar">
+            <p id="saveMessage" class="admin-message" role="status" aria-live="polite">Los cambios no se publican hasta presionar Guardar cambios.</p>
+            <button class="admin-button save-button" type="submit">Guardar cambios <span>↗</span></button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="admin-footer mono"><span>BLACKOUT® / PANEL DE CONTROL</span><span>NO COMPARTAS TUS CREDENCIALES</span></footer>
+  </div>
+</body>
+</html>

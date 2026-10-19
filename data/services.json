@@ -1,0 +1,51 @@
+[
+  {
+    "id": "web-basic",
+    "title": "Página web básica",
+    "description": "Una presencia web clara para empezar a mostrar tu negocio o proyecto.",
+    "price": 100000,
+    "quote": false
+  },
+  {
+    "id": "web-advanced",
+    "title": "Página web avanzada",
+    "description": "Más secciones y recursos para presentar mejor tus servicios.",
+    "price": 150000,
+    "quote": false
+  },
+  {
+    "id": "web-pro",
+    "title": "Página web profesional",
+    "description": "Una web más completa, cuidada y adaptada a tus objetivos.",
+    "price": 200000,
+    "quote": false
+  },
+  {
+    "id": "web-company",
+    "title": "Página web de empresa",
+    "description": "Presencia digital empresarial con estructura personalizada.",
+    "price": 300000,
+    "quote": false
+  },
+  {
+    "id": "notebook-unlock",
+    "title": "Desbloqueo de notebooks de gobierno",
+    "description": "Consulta por desbloqueo y revisión según el modelo y estado del equipo.",
+    "price": 15000,
+    "quote": false
+  },
+  {
+    "id": "windows-install",
+    "title": "Instalación de Windows",
+    "description": "Instalación del sistema operativo y configuración inicial.",
+    "price": 10000,
+    "quote": false
+  },
+  {
+    "id": "pc-optimization",
+    "title": "Optimización de PC",
+    "description": "Revisión del equipo y evaluación del trabajo necesario antes de presupuestar.",
+    "price": null,
+    "quote": true
+  }
+]

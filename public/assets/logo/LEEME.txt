@@ -1,0 +1,9 @@
+CARPETA DEL LOGOTIPO
+
+El archivo usado actualmente por la web es logo.svg.
+
+Para reemplazarlo por tu logo, guardá/exportá tu logotipo en formato SVG y reemplazá este archivo manteniendo exactamente el nombre logo.svg. La página lo cargará automáticamente desde esta carpeta.
+
+Si tu logo está en PNG o JPG, guardalo aquí y cambiá en index.html la ruta assets/logo/logo.svg por la ruta de tu archivo, por ejemplo assets/logo/logo.png. Para mejores resultados, usá un logotipo horizontal con fondo transparente.
+
+El logo.svg incluido es solo una marca de muestra para que la página no quede sin identidad mientras preparás el definitivo.

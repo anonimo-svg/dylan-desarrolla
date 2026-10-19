@@ -1,0 +1,54 @@
+DYLAN-DESARROLA / BLACKOUT — SITIO CON PANEL ADMIN
+
+ESTRUCTURA
+
+  dylan-desarrola/
+  ├── server.js               Servidor y autenticación del panel
+  ├── package.json            Dependencias y comandos npm
+  ├── .env                    Credenciales y secreto privado (no publicar)
+  ├── .env.example            Plantilla de variables de entorno
+  ├── .gitignore              Evita subir .env y node_modules
+  ├── data/
+  │   └── services.json       Servicios, precios y descripciones guardados
+  └── public/
+      ├── index.html          Página pública
+      ├── admin.html          Inicio de sesión y panel de administración
+      ├── css/                Estilos de la web y del panel
+      ├── js/                 Animaciones, servicios y funcionamiento del panel
+      └── assets/logo/        Logotipo
+
+CÓMO INICIAR EN VISUAL STUDIO CODE (WINDOWS)
+
+1. Abrí la carpeta dylan-desarrola en Visual Studio Code.
+2. Abrí Terminal > Nueva terminal.
+3. Ejecutá: npm install
+4. Cuando termine, ejecutá: npm start
+5. Abrí http://localhost:3000 para ver la página.
+6. Abrí http://localhost:3000/admin para entrar al panel.
+7. Iniciá sesión con el usuario y contraseña establecidos en tu archivo .env.
+8. Editá títulos, descripciones y precios y pulsá Guardar cambios.
+
+CREDENCIALES INICIALES
+Usuario: blackout
+Contraseña: dylanr7144
+
+Podés cambiarlas editando ADMIN_USER y ADMIN_PASSWORD dentro de .env. Si modificás SESSION_SECRET, las sesiones vigentes dejarán de ser válidas. Reiniciá el servidor después de cambiar .env (Ctrl+C y npm start).
+
+IMPORTANTE
+
+- No abras index.html con doble clic ni uses Live Server para ejecutar esta versión. Necesita el servidor Node.js para cargar y guardar precios.
+- El panel protege el acceso desde el servidor; la contraseña no está escrita en el JavaScript del navegador.
+- Los cambios se guardan en data/services.json y se reflejan a todos los visitantes del mismo sitio/servidor.
+- El panel permite editar título, descripción y precio de los siete servicios actuales. No agrega ni elimina servicios.
+- Antes de publicar en Internet, usá HTTPS, establecé NODE_ENV=production en el entorno de hosting y cambiá la contraseña por una larga y exclusiva. El modo de producción usa cookies Secure y necesita HTTPS. No subas .env a un repositorio.
+- Este paquete usa limitación de intentos de acceso en memoria; para varios servidores o una instalación de gran escala conviene configurarla con un almacén compartido.
+- Para cambiar el logo, reemplazá public/assets/logo/logo.svg manteniendo la ruta y el nombre.
+
+CONTACTO CONFIGURADO
+WhatsApp: 353 566-9489
+Correo: dylaanrossetto@gmail.com
+
+
+PUBLICAR EN INTERNET
+
+Consulta PUBLICAR_EN_INTERNET.md para publicar la aplicación en Render con una URL pública, variables privadas y disco persistente. No publiques el archivo .env.
