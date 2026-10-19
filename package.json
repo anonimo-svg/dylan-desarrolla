@@ -2,11 +2,12 @@
   "name": "dylan-desarrola-blackout",
   "version": "1.0.0",
   "private": true,
-  "description": "Sitio BLACKOUT con panel de administración protegido para servicios y precios.",
+  "description": "BLACKOUT: sitio web con funciones de Netlify y panel privado persistido en Supabase.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "dev": "node server.js"
+    "dev": "node server.js",
+    "build": "node --check netlify/functions/services.mjs && node --check netlify/functions/admin-login.mjs && node --check netlify/functions/admin-logout.mjs && node --check netlify/functions/admin-services.mjs"
   },
   "engines": {
     "node": ">=18"
@@ -16,6 +17,7 @@
     "dotenv": "^17.2.3",
     "express": "^5.3.0",
     "express-rate-limit": "^8.7.1",
-    "helmet": "^8.1.0"
+    "helmet": "^8.1.0",
+    "@supabase/supabase-js": "^2.0.0"
   }
 }
